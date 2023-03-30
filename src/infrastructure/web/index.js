@@ -5,8 +5,7 @@ const app = express()
 //Set middlewars, statics, use, etc
 
 app.get('/', (req,res)=>{
-    res.json('MOCA')
-})
-
+    res.send('SERVER OK')
+});
 
 export default app
