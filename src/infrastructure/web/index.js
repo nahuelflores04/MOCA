@@ -7,7 +7,8 @@ import bodyParser from 'body-parser';
 import { engine } from "express-handlebars";
 import login_routes from '../web/api/routes/main_routes.js'
 import product_routes from '../web/api/routes/product_routes.js'
-
+import session from 'express-session';
+import passport from 'passport';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -18,6 +19,17 @@ app.use(express.static(publicPath));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// Configuración de sesión
+app.use(session({
+  secret: 'mysecret',
+  resave: false,
+  saveUninitialized: false
+}));
+
+// Configuración de passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Enrutamientos
 app.use(login_routes);
