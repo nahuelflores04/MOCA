@@ -68,7 +68,7 @@ passport.deserializeUser(async (username, done) => {
         done(null, user);
     } catch (err) {
         done(err, null);
-    }
+    };
 });
 
 router.use(passport.initialize());
