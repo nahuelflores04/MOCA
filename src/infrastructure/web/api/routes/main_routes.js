@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { getConnection } from "../../../databases/sql/sql_connection.js";
-import passport from 'passport'
+import passport from 'passport';
 import bcrypt from "bcrypt";
 import session from 'express-session';
 import { Strategy } from "passport-local";
@@ -88,7 +88,13 @@ async function isAuth(req, res, next) {
 };}
 
 
-router.post('/login', passport.authenticate('local', { successRedirect: 'http://localhost:5000/auth_pass', failureRedirect: 'http://localhost:5000/login_error'}))
+router.post('/login', async(req,res)=> {
+    const data = req.body
+    console.log(data)
+    //res.render('vista_test', {data}) => Hola usuario {legajo}, su contraseña actual es {password}
+});
+
+// router.post('/login', passport.authenticate('local', { successRedirect: 'http://localhost:5000/auth_pass', failureRedirect: 'http:/localhost:5000/login_error'}))
 router.get('/auth_pass', isAuth, auth_pass);
 router.get('/login_error', login_error);
 

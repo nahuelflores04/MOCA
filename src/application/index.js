@@ -1,1 +1,1 @@
-//asdadsdas
+//La carpeta app o application contiene toda la LOGICA DE NEGOCIO;
