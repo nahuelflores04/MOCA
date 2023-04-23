@@ -5,8 +5,7 @@ import { dirname } from "path";
 import cors from "cors";
 import bodyParser from 'body-parser';
 import { engine } from "express-handlebars";
-import login_routes from '../web/api/routes/main_routes.js'
-import product_routes from '../web/api/routes/product_routes.js'
+import login_routes from './api/routes/routes.js'
 import session from 'express-session';
 import passport from 'passport';
 
@@ -33,7 +32,6 @@ app.use(passport.session());
 
 //Enrutamientos
 app.use(login_routes);
-app.use(product_routes);
 
 //Handlebars
 app.set("views", path.join(__dirname, "../../views"));

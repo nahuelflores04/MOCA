@@ -1,29 +1,35 @@
 {
-  "name": "moca",
+  "name": "src",
   "version": "1.0.0",
-  "description": "\"Manufacturing Operations Control and Analysis System (MOCA)",
+  "description": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js babel-node",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js babel-node"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.21.0",
-    "@babel/core": "^7.21.3",
+    "@babel/core": "^7.21.4",
     "@babel/node": "^7.20.7",
-    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-env": "^7.21.4",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.4",
     "express-session": "^1.17.3",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "moment": "^2.29.4",
     "mssql": "^9.1.1",
     "passport": "^0.6.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "passport-session": "^1.0.2",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

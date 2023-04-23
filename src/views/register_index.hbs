@@ -1,0 +1,97 @@
+<div class="container text-center mt-5 mb-2 logo-magna">
+  <img
+    class="img-fluid mx-auto d-block"
+    src="./media/magnatransparente.png"
+    alt="MAGNA"
+  />
+</div>
+<div class="container container-login text-center mt-5 mb-5">
+  <div class="logo">
+    <img src="./media/magnatransparente.png" alt="ExpensePro" />
+    <!--provisional hasta tener logo-->
+  </div>
+  <div class="fs-1 fw-bold mb-4"><i class="bi bi-person-add"></i>
+    <br />
+    Registro
+  </div>
+  <form action="/register" method="POST">
+    <div class="row">
+      <div class="col-md-6 mt-3">
+        <input
+          class="form-control p-2"
+          type="number"
+          id="legajo"
+          name="legajo"
+          placeholder="Legajo"
+          required
+        />
+      </div>
+      <div class="col-md-6 mt-3">
+        <input
+          class="form-control p-2"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Apellido y Nombre"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mt-3">
+        <input
+          class="form-control p-2"
+          type="number"
+          id="cuil"
+          name="cuil"
+          placeholder="N° CUIL"
+          required
+        />
+      </div>
+      <div class="col-md-6 mt-3">
+        <select class="form-select p-2" name="area" id="area" required>
+          <option>Seleccione su área</option>
+          {{#each areas}}
+            <option value="{{this.area_id}}">{{this.area_description}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 mt-3">
+        <input
+          class="form-control p-2"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Correo electrónico"
+          required
+        />
+      </div>
+      <div class="col-md-12 mt-3">
+        <input
+          class="form-control p-2"
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Contraseña"
+          required
+        />
+      </div>
+    </div>
+    <div class="col-md-12 mt-3">
+      <input
+        class="form-control p-2"
+        type="password"
+        id="confirm_password"
+        name="confirm_password"
+        placeholder="Confirmar contraseña"
+        required
+      />
+    </div>
+    <button
+      class="btn btn-success btn-send mt-4"
+      type="submit"
+    >REGISTRAR</button>
+  </form>
+</div>

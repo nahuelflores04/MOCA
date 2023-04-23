@@ -1,10 +1,10 @@
 import sql from 'mssql'
 
 const dbSettings = {
-    user: 'user',
-    password: 'pass',
-    server: '',
-    database: '',
+    user: 'sa',
+    password: 'Nahuelflores.10',
+    server: 'localhost',
+    database: 'METACODE_MOCA',
     port: 1433,
     options: {
         encrypt: false,
